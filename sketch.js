@@ -391,10 +391,10 @@ function draw() {
 			  r[R_SYSRET] = r[R_PC]+1;
 			  r[R_PC]=r[R_SSK];
 		  }else if(memory[r[R_PC]] == I_IRQ){
-			  r[R_SYSRET] = r[R_PC]+1;
+			  r[R_SYSRET] = r[R_PC]+2;
 			  r[R_PC]=r[R_SSK];
 		  }else if(memory[r[R_PC]] == I_INT){
-			  r[R_SYSRET] = r[R_PC]+1;
+			  r[R_SYSRET] = r[R_PC]+2;
 			  r[R_PC]=r[R_SSK];
 		  }else if(memory[r[R_PC]] == I_SSK){
 			  r[R_SSK] = memory[r[R_PC] + 1];
